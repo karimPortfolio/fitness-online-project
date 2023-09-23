@@ -1,0 +1,77 @@
+
+
+footer
+{
+    position: relative;
+    top: 65px;
+    background-color: var(--bg-color);
+}
+
+footer section ul
+{
+    list-style: none;
+}
+
+footer section ul li a
+{
+    color: #777;
+    text-decoration: none;
+    font-family: var(--font2);
+    font-size: 15px;
+}
+
+footer section a img
+{
+    width: 110px;
+    height: 55px;
+}
+
+footer section .first_part p
+{
+    width: 70%;
+    font-family: var(--font2);
+}
+
+footer section .first_part a
+{
+    text-decoration: none;
+    font-size: 27px;
+}
+footer section .first_part a span
+{
+    color: var(--color2);
+}
+
+footer section .first_part .owner_info
+{
+    font-size: 15px;
+}
+
+footer section .first_part .owner_info a
+{
+    color: var(--color2);
+    font-size: 15px;
+}
+
+footer section h5
+{
+    color: var(--color2);
+    font-family: var(--font2);
+}
+
+footer .copyright p
+{
+    font-family: var(--font2);
+    font-size: 14px;
+}
+
+
+@media (max-width:557px)
+{
+    footer section .first_part p
+    {
+        width: 100%;
+    }
+}
+
+

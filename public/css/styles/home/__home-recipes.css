@@ -1,0 +1,77 @@
+
+
+#recipes .first-part h1
+{
+    color: var(--color2);
+    font-family: var(--font);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 55px;
+}
+
+#recipes .card img
+{
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+#recipes #card
+{
+    background-color: var(--bg-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#recipes .card h5
+{
+    color: #000;
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-size: 40px;
+}
+
+#recipes .card
+{
+    font-family: "DM Sans" , sans-serif;
+    font-size: 14px; 
+}
+
+#recipes .second-part .card a
+{
+    text-decoration: none !important; 
+    width: fit-content;   
+}
+
+#recipes .programs_link
+{
+    transition: var(--transition);
+}
+
+#recipes .second-part .card a:hover .programs_link
+{
+    transform: translate(6px, 0);
+}
+
+
+@media (max-width:540px)
+{
+    #recipes .card
+    {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #recipes .first-part h1
+    {
+        font-size: 30px;
+    }
+
+    #recipes .card img
+    {
+        width: 100%;
+        height: 50%;
+    }
+}
+
+

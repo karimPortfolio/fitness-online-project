@@ -1,0 +1,213 @@
+
+
+#search-hero-section
+{
+    height: calc(100vh - 65px);
+    position: relative;
+    top: 65px;
+    background-color: var(--bg-color);
+}
+
+
+#search-hero-section ~ section
+{ 
+    position: relative;
+    top: 65px;
+}
+
+
+#search-hero-section img
+{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+#search-hero-section h2
+{
+    color: var(--color2);
+    font-family: var(--font2);
+    font-size: 45px;
+}
+
+
+#search-hero-section h1
+{
+    font-family: var(--font);
+    font-size: 65px;
+}
+
+
+
+#search-results .first_part h1
+{
+    color: var(--color2);
+    font-size: 55px;
+    font-family: var(--font);
+}
+
+#search-results .card img
+{
+    width: 170px;
+    height: 250px;
+    object-fit: cover;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+
+
+#search-results .card h5
+{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-size: 38px;
+}
+
+#search-results .recipe_duration
+{
+    font-size: 16px;
+    font-family: var(--font2);
+}
+
+#all-recipes .card
+{
+    font-family: "DM Sans" , sans-serif;
+    font-size: 13px; 
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: var(--bg-color);
+}
+
+#search-results .card a
+{
+    text-decoration: none !important; 
+    width: fit-content;   
+    font-size: 15px;
+    color: #FFFF !important;
+    background-color: var(--color2) !important;
+    border: none;
+}
+
+#search-results .card-program a
+{
+    background-color: #FFFF !important;
+    color: #000 !important;
+}
+
+#search-results .card a:hover
+{
+    opacity: .85;
+}
+
+#search-results .recipes_link
+{
+    transition: var(--transition);
+}
+
+#search-results .card a:hover .recipes_link
+{
+    transform: translate(6px, 0);
+}
+
+#search-results #card1
+{
+    background-color: #ac1690;
+}
+#search-results #card2
+{
+    background-color: #ff59a9;
+}
+#search-results #card3
+{
+    background-color: #5990ff;
+}
+#search-results #card4
+{
+    background-color: var(--color2);
+}
+#search-results #card5
+{
+    background-color: #ff9767;
+}
+#search-results #card6
+{
+    background-color: #feca30;
+}
+
+
+#search-not-found
+{
+    height: calc(100vh - 65px);
+    position: relative;
+    top: 65px;
+}
+
+#search-not-found svg
+{
+    color: var(--color2);
+}
+
+#search-not-found h1
+{
+    font-family: var(--font2);
+    font-size: 45px;
+}
+
+#search-not-found h1 span
+{
+    color: var(--color2);
+}
+
+
+@media (max-width:992px)
+{
+    #search-hero-section img
+    {
+        opacity: .2;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #programs-hero-section h1
+    {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+@media (max-width:776px)
+{
+    #search-hero-section img
+    {
+        display: none;
+    }
+}
+
+
+@media (max-width:540px)
+{
+    #search-results .card
+    {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #search-results .card img
+    {
+        width: 100%;
+    }
+
+    #programs-hero-section h2
+    {
+        font-size: 30px;
+    }
+    
+    #programs-hero-section h1:first-of-type
+    {
+        font-size: 44px;
+    }
+
+}

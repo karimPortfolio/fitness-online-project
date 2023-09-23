@@ -1,0 +1,104 @@
+
+
+#dashboard
+{
+    position: relative;
+    top: 65px;
+}
+
+nav .nav_logo img
+{
+    width: 110px;
+    height: 55px;
+}
+
+nav .nav_profile_links button
+{
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 45px;
+    height:45px;
+    color: var(--color2) !important;
+    background-color: #eddffe !important;
+    border-radius: 50%;
+    font-size: 20px;
+    font-family: var(--font2);
+    cursor: pointer;
+    text-decoration: none !important;
+    border: 0px solid transparent !important;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+nav .nav_profile_links .dropdown-menu
+{
+    top: 10px !important;
+}
+
+
+#dashboard #first_part h2
+{
+    font-family: var(--font2);
+}
+
+#dashboard #first_part h2 span
+{
+    color: var(--color2);
+}
+
+#dashboard #second_part h4
+{
+    color: var(--color2);
+    font-size: 30px;
+    font-family: var(--font);
+}
+
+#dashboard #second_part .card img
+{
+    width: 170px;
+    height: 250px;
+    object-fit: cover;
+}
+
+#dashboard #second_part .card
+{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#dashboard #second_part .card h5
+{
+    color: #FFFF;
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-size: 35px;
+}
+
+#dashboard #second_part .card
+{
+    font-family: "DM Sans" , sans-serif;
+    font-size: 13px; 
+}
+
+#dashboard #second_part .card a
+{
+    text-decoration: none !important; 
+    width: fit-content;   
+    font-size: 15px;
+    color: #333 !important;
+}
+
+#dashboard #second_part .card a:hover
+{
+    background-color: #eee;
+}
+
+#dashboard #second_part .programs_not_found h1
+{
+    font-family: var(--font2);
+    font-size: 31px;
+}
+
+#dashboard #second_part .programs_not_found h1 a
+{
+    color: var(--color2) !important;
+}

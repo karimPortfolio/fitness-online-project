@@ -1,0 +1,76 @@
+
+#programs .first-part h1
+{
+    color: var(--color2);
+    font-family: var(--font);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 55px;
+}
+
+#programs .card img
+{
+    width: 170px;
+    height: 250px;
+    object-fit: cover;
+}
+
+#programs #card1
+{
+    background-color: #ac1690;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#programs #card2
+{
+    background-color: #ff59a9;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#programs #card3
+{
+    background-color: #5990ff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#programs .card h5
+{
+    color: #FFFF;
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-size: 40px;
+}
+
+#programs .card
+{
+    font-family: "DM Sans" , sans-serif;
+    font-size: 14px; 
+}
+
+#programs .second-part .card a
+{
+    text-decoration: none !important; 
+    width: fit-content;   
+}
+
+#programs .programs_link
+{
+    transition: var(--transition);
+}
+
+#programs .second-part .card a:hover .programs_link
+{
+    transform: translate(6px, 0);
+}
+
+
+@media (max-width:540px)
+{
+    #programs .card
+    {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #programs .first-part h1
+    {
+        font-size: 30px;
+    }
+}

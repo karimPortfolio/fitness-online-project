@@ -1,0 +1,33 @@
+
+
+#not-found-page
+{
+    background-color: var(--bg-color);
+}
+
+#not-found-page .img
+{
+    position: relative;
+    top: -130px;
+}
+
+#not-found-page .img img
+{
+    width: 300px;
+    height: 150px;
+}
+
+
+#not-found-page h1
+{
+    font-size: 50px;
+    font-family: var(--font);
+}
+
+#not-found-page a
+{
+    color: var(--color2);
+    font-family: var(--font2);
+    text-decoration: none;
+    font-size: 25px;
+}

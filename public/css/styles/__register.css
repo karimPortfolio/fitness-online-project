@@ -1,0 +1,147 @@
+
+
+#register
+{
+    height: 100vh;
+}
+
+#register #first-section
+{
+    background: linear-gradient(60deg ,#d2b0ff,#b37bfb);
+    /* background: linear-gradient(60deg ,#fbec9e,#ffd65b); */
+    height: 100%;
+}
+
+#register #first-section img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+#register #first-section h1
+{
+    font-family: var(--font);
+    font-size: 50px;
+    color:var(--color1);
+}
+
+#register #first-section p
+{
+    color: #FFFF;
+    font-family: var(--font2);
+    font-size: 18px;
+}
+
+#register #second-section
+{
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#register #second-section h1
+{
+    font-family: var(--font);
+    color: #b37bfb;
+}
+
+#register #second-section .sign_up_with_google button
+{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 50%;
+}
+
+#register #second-section .sign_up_with_google img
+{
+    width: 40px;
+    height: 40px;
+}
+
+#register #second-section .hr_effect span,
+#login #second-section .hr_effect span
+{
+    width: 33.5%;
+    position: relative;
+}
+
+#register #second-section .hr_effect span::after,
+#login #second-section .hr_effect span::after
+{
+    content: "";
+    width: 100%;
+    height: 0.6px;
+    background-color: #00000040;
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+#register #second-section .hr_effect,
+#login #second-section .hr_effect
+{
+    font-family: var(--font2);
+    font-size: 17px;
+}
+
+#register #second-section .signup_form form input,
+#login #second-section .signup_form form input
+{
+    height: 55px !important;
+}
+
+#register #second-section .signup_form form input:focus,
+#login #second-section .signup_form form input:focus
+{
+    outline: #b27bfb3a 5px solid !important;
+    border: #b37bfb 1px solid;
+}
+
+#register #second-section .signup_form form button
+{
+    background: linear-gradient(60deg ,#d2b0ff,#b37bfb);
+    color:#FFFF;
+    border: 0px solid transparent;
+    outline: 0px solid transparent !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: var(--transition);
+}
+
+#register #second-section .signup_form form button:hover
+{
+    background: linear-gradient(#ba86ff,#ba86ff);
+    transform: scale(0.98);
+}
+
+.alert-danger
+{
+    background-color: #d50000 !important;
+    border-left: #ff4f4f 6px solid;
+    color: #FFFF;
+}
+
+#register .already_registered_p
+{
+    font-family: var(--font2);
+}
+
+#register .already_registered_p a
+{
+    text-decoration: none !important;
+    color: var(--color2) !important;
+}
+
+@media (max-width:776px)
+{
+    #register #second-section
+    {
+        background: var(--bg-color);
+    }
+}
+
+@media (max-width:465px)
+{
+    #register #second-section .sign_up_with_google button
+    {
+        width:84%;
+    }
+}

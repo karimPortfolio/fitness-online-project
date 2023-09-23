@@ -1,0 +1,165 @@
+
+@import url(navmobile/__nav.css);
+
+nav
+{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position:fixed;
+    width: 100%;
+    z-index: 10000;
+    background: #ffffffb3;
+    box-shadow: 0 4px 30px #0000001a;
+    backdrop-filter: blur(8.7px);
+    -webkit-backdrop-filter: blur(8.7px);
+}
+
+nav .logo a
+{
+    color:#000 !important;
+    text-decoration:none !important;
+    font-family: var(--font);
+    font-size: 22px;
+}
+
+nav .logo a img
+{
+    width: 110px;
+    height: 55px;
+}
+
+nav .logo a span
+{
+    color: var(--color2);
+}
+
+nav .nav-links ul
+{
+    list-style: none !important;
+}
+
+nav .nav-links ul li a
+{
+    color: #000;
+    text-decoration:  none !important;
+    font-family: var(--font);
+    transition: var(--transition);
+}
+
+.links
+{
+    position: relative !important;
+}
+
+.links::after
+{
+    content: "";
+    background-color: var(--color2);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+nav .nav-links ul li a:hover .links::after
+{
+    height: 3px;
+}
+nav .nav-links ul li a:hover
+{
+    color: var(--color2);
+}
+
+nav .auth_links a:first-of-type
+{
+    color: #000 !important;
+    text-decoration:  none !important;
+    font-family: var(--font);
+}
+
+nav .auth_links a:last-of-type
+{
+    background: var(--color2);
+    border: 2px solid var(--color2);
+}
+
+nav .search_bar
+{
+    position: relative;
+}
+
+nav .search_bar .search_input_hidden
+{
+    position: absolute;
+    top: 0;
+    left: -570px;
+    transform: translate(0, -100px);
+    transition: var(--transition);
+    visibility: hidden;
+}
+
+nav .search_bar .search_input
+{
+    position: absolute;
+    top: -20px;
+    left: -570px;
+    transition: var(--transition);
+    transform: translate(0, 0);
+    transition: var(--transition);
+    visibility: visible;
+}
+
+
+nav .search_bar input
+{
+    width: 500px;
+    height: 43px;
+    border: 1px solid #00000058;
+    border-radius: 4px;
+    padding-left: 15px;
+    outline: none !important;
+}
+
+nav .search_bar input::placeholder
+{
+    font-size: 15px;
+}
+
+nav .search_bar .search_btn button
+{
+    height: 43px;
+}
+
+nav .search_bar .search_icon svg:hover
+{
+    cursor: pointer;
+}
+
+nav .search_bar .close_search_input svg
+{
+    cursor: pointer;
+}
+
+nav .dashboard_btn button
+{
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 45px;
+    height:45px;
+    color: var(--color2) !important;
+    background-color: #e3cefe !important;
+    border-radius: 50%;
+    font-size: 20px;
+    font-family: var(--font2);
+    cursor: pointer;
+    text-decoration: none !important;
+    border:2px solid transparent !important;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+nav .dashboard_btn .dropdown-menu
+{
+    top: 10px !important;
+}

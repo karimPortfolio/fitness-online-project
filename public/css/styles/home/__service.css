@@ -1,0 +1,46 @@
+
+
+#service .first-part h1
+{
+    color: var(--color2);
+    font-family: var(--font);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 55px;
+}
+
+#service .second-part img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#service .second-part h2
+{
+    font-family: var(--font);
+}
+
+#service .second-part p
+{
+    font-family: var(--font2);
+    font-size: 24px;
+}
+
+#service .second-part svg
+{
+    color: var(--color2);
+    width: 120px;
+}
+
+@media (max-width:540px)
+{
+
+    #service .first-part h1
+    {
+        font-size: 30px;
+    }
+
+}
+
+

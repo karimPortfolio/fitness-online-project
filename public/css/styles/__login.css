@@ -1,0 +1,135 @@
+
+#login
+{
+    height: 100vh;
+}
+
+#login #first-section,
+#login #second-section,
+#login .row
+{
+    height: 100%;
+}
+
+#login #first-section img
+{
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+}
+
+#login #first-section .carousel-item
+{
+    position: relative;
+}
+
+#login #first-section .carousel-item::after
+{
+    content: "";
+    background: linear-gradient(15deg, #000000d3 20%, #0000000b 53%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#login #first-section .carousel-item-body
+{
+    position: absolute;
+    top:66%;
+    z-index: 10;
+}
+
+
+
+#login #first-section .carousel-item-body h2
+{
+    color:var(--color3);
+    font-family: var(--font);
+    font-size: 42px;
+}
+
+#login #first-section .carousel-item-body h5
+{
+    font-family:var(--font2);
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 20px !important;
+}
+
+#login #first-section .carousel-item-body p
+{
+    font-size: 18px;
+    font-family: var(--font2);
+}
+
+#login #second-section h1
+{
+    font-family: var(--font);
+    font-size: 50px;
+}
+
+#login #second-section .signin_with_google button
+{
+    width: 55%;
+}
+
+#login #second-section .signin_with_google img
+{
+    width: 40px;
+    height: 40px;
+}
+
+#login #second-section .signup_form form button
+{
+    background:var(--color3);
+    color:#FFFF;
+    border: 0px solid transparent;
+    outline: 0px solid transparent !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: var(--transition);
+}
+
+#login #second-section .signup_form form input:focus
+{
+    outline: #b0006f82 3px solid !important;
+    border: var(--color3) 1px solid;
+}
+
+#login #second-section .signup_form form button:hover
+{
+    background:var(--color3);
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+#login .not_registered p
+{
+    font-family: var(--font2);
+}
+
+#login .not_registered a
+{
+    color: var(--color3) !important;
+    text-decoration: none !important;
+}
+
+
+@media (max-width:776px)
+{
+    #login #second-section
+    {
+        background: #f3ebff;
+    }
+}
+
+@media (max-width:465px)
+{
+    #login #second-section .signin_with_google button
+    {
+        width:84%;
+    }
+}
+

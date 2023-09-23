@@ -1,0 +1,76 @@
+<% extend('../layouts/layout') %>
+
+<% if (recipe !== null) { %>
+
+    <section id="recipes-details-hero-section">
+
+        <div class="row w-100 m-0 px-3 px-sm-5 pt-5">
+            <div class="col-lg-6 pb-5 d-flex justify-content-center align-items-center flex-column">
+                <h2 class="w-100">Recipe</h2>
+                <h1 class="w-100 text-dark mb-5 mt-3 mt-sm-5"> <%= recipe.recipe %> </h1>
+            </div>
+    
+            <div class="col-lg-6 d-flex justify-content-center ps-lg-5 pb-5">
+                <img src="/images/recipes/<%= recipe.image %>" alt="<% recipe.recipe %> recipe" class="shadow">
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="recipe-details" class="py-4 my-5 px-3 px-sm-5">
+        
+        <h1 class=" pb-5" >Recipe details</h1>
+
+        <div class="first_part">
+            <h5>Benefits</h5>
+            <p class="mb-0 mt-4"> <%= recipe.benefits %> </p>
+        </div>
+
+        <div class="second_part mt-5">
+            <h5>Ingredients</h5>
+            <span class="d-none ingredients_data_holder">
+                <%= recipe.ingredients %>
+            </span>
+            <ul class="mb-0 p-3 mt-2 recipe_ingredients"  ></ul>
+        </div>
+
+        <div class="second_part mt-5">
+            <h5>How to prepare</h5>
+            
+            <p class="mt-4"> <%= recipe.preparation %> </p>
+        </div>
+
+        
+
+    </section>
+
+
+<% } else { %>
+
+    <div class="vh-100 pt-5">
+        <h1 class="mt-5 text-center">Aww! no recipe found with this id.</h1>
+    </div>
+
+<% } %>
+
+
+<script>
+
+    function getIngredients(ingredients) {
+
+        let allIngredients = ingredients.split(";");
+        allIngredients.forEach( (ingredient) => {
+            const li = document.createElement("li");
+            let para = document.querySelector(".recipe_ingredients");
+            li.innerHTML = ingredient+".";
+            para.appendChild(li);
+        });
+
+    }
+
+    const ingredients = document.querySelector(".ingredients_data_holder").innerHTML;
+    getIngredients(ingredients);
+
+</script>
+

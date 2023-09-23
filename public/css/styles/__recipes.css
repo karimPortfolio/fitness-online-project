@@ -1,0 +1,92 @@
+
+
+@import url(recipesDetails/__recipesDetails.css);
+
+#all-recipes
+{
+    position: relative;
+    top: 65px;
+}
+
+#all-recipes .first_part h1
+{
+    color: var(--color2);
+    font-size: 55px;
+    font-family: var(--font);
+}
+
+#all-recipes .card img
+{
+    width: 170px;
+    height: 250px;
+    object-fit: cover;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+
+
+#all-recipes .card h5
+{
+    font-family:'Bricolage Grotesque', sans-serif;
+    font-size: 38px;
+}
+
+#all-recipes .recipe_duration
+{
+    font-size: 16px;
+    font-family: var(--font2);
+}
+
+#all-recipes .card
+{
+    font-family: "DM Sans" , sans-serif;
+    font-size: 13px; 
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: var(--bg-color);
+}
+
+#all-recipes .card a
+{
+    text-decoration: none !important; 
+    width: fit-content;   
+    font-size: 15px;
+    color: #FFFF !important;
+    background-color: var(--color2) !important;
+    border: none;
+}
+
+#all-recipes .card a:hover
+{
+    opacity: .7;
+}
+
+#all-recipes .recipes_link
+{
+    transition: var(--transition);
+}
+
+#all-recipes .card a:hover .recipes_link
+{
+    transform: translate(6px, 0);
+}
+
+
+@media (max-width:540px)
+{
+    #all-recipes .card
+    {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #all-recipes .card img
+    {
+        width: 100%;
+    }
+
+}
+
+
+

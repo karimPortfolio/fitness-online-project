@@ -1,0 +1,145 @@
+<% extend('../layouts/layout') %>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<% if (program !== null) { %>
+    <section id="details-hero-section" style="background:<%= program.background %>;" class="d-flex justify-content-center align-items-center flex-column">
+
+        <% if (sessionFlash && sessionFlash.type === 'success') { %>
+
+            <script>
+                $(document).ready(function() {
+                    $('#myModal').modal('show');
+                });
+            </script>
+    
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="/images/programs/congrats-msg.png" alt="">
+                            </div>
+                            <h5 class="text-center mt-3"><%= sessionFlash.message %></h5>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        <% } %>
+
+
+        <% if (sessionFlash && sessionFlash.type === 'failed') { %>
+            <div class="alert alert-danger mx-5">
+                <%= sessionFlash.message %>
+            </div>
+        <% } %>
+
+        <div class="row w-100 m-0 px-3 px-sm-5 pt-5">
+            <div class="col-lg-6 pb-5 d-flex justify-content-center align-items-center flex-column">
+                <h1 class="w-100 text-white text-start mb-1"> <%= program.programme %> </h1>
+                <% if (isJoined === null || !isJoined) { %>
+                    <div class="d-flex justify-content-start w-100">
+                        <a href="/programs/join/<%= program.id %>" class="btn btn-warning d-flex align-items-center justify-content-center mt-4">
+                            Join now
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-right ms-2 details_link" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+    
+            <div class="col-lg-6 d-flex justify-content-center ps-5">
+                <img src="/images/programs/<%= program.image %>" alt="">
+            </div>
+        </div>
+    
+    </section>
+
+
+    <section id="details-program-info" class="py-5 my-4">
+
+        <h1 class="ps-3 ps-sm-5 pb-5" style="color: <%= program.background %>;">Program details</h1>
+
+        <div class="first_part row m-0 w-100 px-3 px-sm-5 mt-5">
+
+            <div class="col-sm-6 col-lg-4 px-2 d-flex justify-content-lg-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: <%= program.background %>;" width="55" height="55" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+                    <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/>
+                    <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h7zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+                    <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                </svg>
+                <p class="mb-0 ms-3">+ <%= program.videos %> videos</p>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2 mt-5 mt-sm-0 d-flex justify-content-lg-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: <%= program.background %>;" width="55" height="55" fill="currentColor" class="bi bi-calendar2-week" viewBox="0 0 16 16">
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+                    <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
+                </svg>
+                <p class="mb-0 ms-3">+ <%= program.weeks %> weeks</p>
+            </div>
+            <div class="col-lg-4 px-2 mt-5 mt-lg-0 d-flex justify-content-lg-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" style="color: <%= program.background %>;" width="55" height="55" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                    <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+                </svg>
+                <p class="mb-0 ms-3">+ <%= program.trainers %>k trainers</p>
+            </div> 
+        </div>
+
+        <!-- ===================== -->
+
+        <div class="second_part px-3 px-sm-5 mt-5 pt-5">
+            <h4 class="mt-5">Why <%= program.programme %> ?</h4>
+            <p class="mt-4"><%= program.description %></p>
+        </div>
+
+    </section>
+
+
+    <section id="details-coach-info" class="pt-5 mt-5 px-3 px-sm-5"> 
+
+        <h1 class="pb-5" style="color: <%= program.background %>;">Coach information</h1>
+
+        <div class="row w-100 m-0">
+            <div class="col-md-5 p-0 coach_img" >
+                <img src="/images/coaches/<%= program.coach_img %>" alt="<%= program.name %> coach">
+            </div>
+    
+            <div class="col-md-7 coach_info mt-5 ps-md-5">
+                <h4 class="ps-md-5"><%= program.name %></h4>
+                <p class="ps-md-5 mb-0 mt-4"> <%= program.role %> </p>
+                <p class="ps-md-5 mt-3"> +<%= program.experience %> years of experience </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="join-program" class="pt-5 mt-5 px-3 px-sm-5">
+
+        <div class="join_card d-flex justify-content-center align-items-center flex-column mx-md-5 px-3 px-sm-5 py-4 my-5">
+            
+            <% if (isJoined === null || !isJoined) { %>
+                <h1 class="text-center mt-4">
+                    Join <%= program.programme %> program now and begin your fitness journey with our <%= program.role %> <%= program.name %> for free.
+                </h1>
+                <a href="/programs/join/<%= program.id %>" class="btn btn-warning my-4 d-flex justify-content-center align-items-center" >Join now</a>
+            <% } else { %>
+                <h1 class="text-center mt-2" style="font-size:30px;">
+                    You have already joined <%= program.programme %> program <%= joinedDate %>.
+                </h1>
+            <% } %>
+        </div>
+
+    </section>
+
+
+<% } else { %>
+    
+<% } %>
+
+

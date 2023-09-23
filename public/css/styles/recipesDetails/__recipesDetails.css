@@ -1,0 +1,133 @@
+
+
+#recipes-details-hero-section
+{
+    height: calc(100vh - 65px);
+    position: relative;
+    top: 65px;
+    background-color: var(--bg-color);
+}
+
+#recipes-details-hero-section ~ section
+{ 
+    position: relative;
+    top: 65px;
+}
+
+
+#recipes-details-hero-section img
+{
+    width: 450px;
+    height: 600px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+#recipes-details-hero-section h2
+{
+    color: var(--color2);
+    font-family: var(--font2);
+    font-size: 45px;
+}
+
+
+#recipes-details-hero-section h1
+{
+    font-family: var(--font);
+    font-size: 65px;
+}
+
+#recipe-details h1:first-of-type
+{
+    color: var(--color2);
+    font-family: var(--font);
+    font-size: 55px;
+}
+
+#recipe-details .first_part h5,
+#recipe-details .second_part h5
+{
+    font-family: var(--font2);
+    font-size: 30px;
+}
+
+#recipe-details .first_part p,
+#recipe-details .second_part p
+{
+    font-family: var(--font2);
+    font-size: 17px;
+    width: 70%;
+    color: #5c5c5c;
+}
+
+#recipe-details .recipe_ingredients li
+{
+    margin-top: 10px;
+    font-size: 18px;
+    color: #5c5c5c;
+}
+
+
+@media (max-width:992px)
+{
+    #recipe-details .first_part p,
+    #recipe-details .second_part p
+    {
+        width: 85%;
+    }
+
+    #recipes-details-hero-section img
+    {
+        width: 100%;
+        height: 350px;
+    }
+
+}
+
+
+@media (max-width:776px)
+{
+    #recipe-details .first_part p,
+    #recipe-details .second_part p
+    {
+        width: 95%;
+    }
+
+    #recipes-details-hero-section img
+    {
+        height: 250px;
+    }
+
+}
+
+@media (max-width:557px)
+{
+    #recipe-details .first_part p,
+    #recipe-details .second_part p
+    {
+        width: 100%;
+    }
+
+    #recipes-details-hero-section h2
+    {
+        font-size: 30px;
+    }
+    
+    #recipes-details-hero-section h1
+    {
+        font-size: 50px;
+    }
+
+    #recipes-details-hero-section img
+    {
+        height: 320px;
+    }
+
+    #recipe-details h1:first-of-type
+    {
+        font-size: 40px;
+    }
+
+}
+

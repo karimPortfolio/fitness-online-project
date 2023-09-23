@@ -1,0 +1,45 @@
+
+<% extend('../../layouts/layout') %>
+
+<section id="register">
+
+    <div class="row w-100 h-100 m-0">
+        <section id="first-section" class="col-md-6 col-lg-5 d-none d-md-block">
+            <div class="pt-4 px-4">
+                <p>Signup and join our big community and get free access to some of our recipes and workout videos.</p>
+            </div>
+            <div>
+                <img src="/images/register/workoutGirl.png" alt="girl doing workout online">
+            </div>
+        </section>
+    
+        <section id="second-section" class="col-md-6 col-lg-7">
+            <div class="mt-5 pt-4">
+                <h1 class="text-center">Signup</h1>
+            </div>
+            <div class="sign_up_with_google d-flex justify-content-center pt-5">
+                <button type="button" class="btn btn-dark rounded-pill d-flex justify-content-center align-items-center"><img src="/images/register/google-icon.png" alt="Google small logo" class="me-2"> Signup with google</button>
+            </div>
+            <div class="hr_effect d-flex justify-content-center py-4">
+                <span></span>
+                <p class="mx-4">Or</p>
+                <span></span>
+            </div>
+            <% if (failed !== null && failed !== "undefined") { %>
+                <div class="failed_messages px-3 px-sm-5 px-md-3 px-lg-5 mx-sm-4 mx-md-0 mx-lg-5">
+                    <%- include('failedMsgs/failedMsgs.ejs', {message:failed}) %>
+                </div>
+            <% } %>
+            <div class="signup_form px-3 px-sm-5 px-md-3 px-lg-5 mx-sm-4 mx-md-0 mx-lg-5">
+                
+                <%- include('register/form.ejs') %>
+
+            </div>
+            <div class="already_registered_p pt-4">
+                <p class="text-center">Already registered ? <a href="/login">Sign in</a></p>
+            </div>
+        </section>
+    </div>
+
+</section>
+
