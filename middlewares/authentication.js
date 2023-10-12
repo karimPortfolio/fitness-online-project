@@ -9,7 +9,7 @@ exports.Auth = (req, res, next) => {
 
     if (typeof userid === "undefined") {
         req.session.sessionFlash = {
-            type: 'success',
+            type: 'failed',
             message: 'You need to login first to join our program.'
         }
         return res.redirect("/login");
@@ -23,7 +23,7 @@ exports.Auth = (req, res, next) => {
         {
             console.log(err.sqlMessage);
             req.session.sessionFlash = {
-                type: 'success',
+                type: 'failed',
                 message: 'Aww! something went wrong.'
             }
             return res.redirect("/login");
