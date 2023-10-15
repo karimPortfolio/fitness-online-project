@@ -1,12 +1,17 @@
 # FITNESS ONLINE
 #### Video Demo:  <URL HERE>
 #### Description:
-FITNESS ONLINE is a online fitness website help users to do home workout without need to go to the gym by provide
-them a lot of professional workout videos by professional coaches, and also the website provide them with a lot
-of recipes for a easy and healthy food the recipes contain the benefits of the recipe and the ingredients needed
-and also how to prepare it. Users can join a workout program by login first to the website then they can choice and join the program they likes and they can quite the program if they want from their dashboard's.
+## About Fitness Online
+FITNESS ONLINE is an online fitness website help users do a home workout without the need to go to the gym by providing
+them a lot of professional workout videos by professional coaches, and the website provides them with a lot
+of recipes for easy and healthy food, the recipes details page contains the recipe benefits and the ingredients needed
+and also how to prepare it. Users can join a workout program by login first to the website then they can choose and join the program they like and they can quit the program if they want from their dashboards.
 
-I developed this project using only JavaScript in both frontend and backend (ejs templates with bootstrap 5 in the client side) and (Express.js in the server side) and i used MySQL as a database management system.
+## Technologies used
+
+I developed this project using only JavaScript in both frontend and backend ( EJS templates with bootstrap 5 in the client side) and (Express.js in the server side) and i used MySQL as a database management system.
+
+## Project details
 
 My Project contains several folders and files:
 
